@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Car Rental</title>
+  <title>Майбах+ - прокат автомобилей в Санкт-Петербурге и области</title>
 
   <!-- Bootstrap -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -52,7 +52,10 @@
         <div class="col-md-5">
           <!-- Logo start -->
           <div class="brand">
-            <h1><a class="scroll-to" href="#top"><img class="img-responsive"  src="img/logo.gif" alt="Car|Rental"></a></h1>
+            <h1><a class="scroll-to" href="#top">
+				<!--<img class="img-responsive"  src="img/logo.gif" alt="Car|Rental">-->
+				<span><b>Майбах+</b></span>
+			</a></h1>
           </div>
           <!-- Logo end -->
         </div>
@@ -84,8 +87,8 @@
                 <!-- Nav-Links start -->
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active"><a href="#" class="scroll-to">Главная</a></li>
-                  <li><a href="#services" class="scroll-to">Услуги</a></li>
                   <li><a href="#vehicles" class="scroll-to">Автопарк</a></li>
+                  <li><a href="#services" class="scroll-to">Услуги</a></li>
                   <li><a href="#reviews" class="scroll-to">Отзывы</a></li>
                   <li><a href="#locations" class="scroll-to">Адреса</a></li>
                   <li><a href="#contact" class="scroll-to">Контакты</a></li>
@@ -112,15 +115,15 @@
               <!-- Wrapper for slides start -->
               <div class="carousel-inner">
                 <div class="item active">
-                  <h1 class="title">Luxury car from from $28 day
-                    <span class="subtitle">Treat yourself in USA</span></h1>
+                  <h1 class="title">Скидки до 30% при прокате более 3 часов
+                    <span class="subtitle">Идеальный вариант для туризма</span></h1>
                     <div class="car-img">
                       <img src="img/car1.png" class="img-responsive" alt="car1">
                     </div>
                   </div>
                   <div class="item">
-                    <h1 class="title">Get 15% off your rental
-                      <span class="subtitle">Plan your trip now</span></h1>
+                    <h1 class="title">Продли свой прокат в любое время!
+                      <span class="subtitle">Подробности ниже</span></h1>
                       <div class="car-img">
                         <img src="img/car2.png" class="img-responsive" alt="car1">
                       </div>
@@ -145,13 +148,13 @@
 
                     <div class="alert alert-danger hidden" id="car-select-form-msg">
                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                      <strong>Note:</strong> All fields required!
+                      <strong>Внимание:</strong> Все поля обязательны!
                     </div>
 
                     <!-- Car select start -->
                     <div class="styled-select-car">
                       <select name="car-select" id="car-select">
-                        <option value="">Select your car type</option>
+                        <option value="">Выберите автомобиль</option>
                         <option value="img/vehicle1.jpg">VW Golf VII</option>
                         <option value="img/vehicle2.jpg">Audi A1 S-LINE</option>
                         <option value="img/vehicle3.jpg">Toyota Camry</option>
@@ -165,17 +168,17 @@
                     <!-- Pick-up location start -->
                     <div class="location">
                       <div class="input-group pick-up">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> Pick-up</span>
-                        <input type="text" name="pick-up-location" id="pick-up-location" class="form-control autocomplete-location" placeholder="Enter a City or Airport">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> Взять</span>
+                        <input type="text" name="pick-up-location" id="pick-up-location" class="form-control autocomplete-location" placeholder=" Введите район">
                       </div>
                       <!-- Pick-up location end -->
 
-                      <a class="different-drop-off" href="#">Need a different drop-off location?</a>
+                      <a class="different-drop-off" href="#">Хотите вернуть автомобиль в другом месте?</a>
 
                       <!-- Drop-off location start -->
                       <div class="input-group drop-off">
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> Drop-off</span>
-                        <input type="text" name="drop-off-location" id="drop-off-location" class="form-control autocomplete-location" placeholder="Enter a City or Airport">
+                        <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> Вернуть</span>
+                        <input type="text" name="drop-off-location" id="drop-off-location" class="form-control autocomplete-location" placeholder=" Введите район">
                       </div>
                     </div>
                     <!-- Drop-off location end -->
@@ -184,7 +187,7 @@
                     <div class="datetime pick-up">
                       <div class="date pull-left">
                         <div class="input-group">
-                          <span class="input-group-addon pixelfix"><span class="glyphicon glyphicon-calendar"></span> Pick-up</span>
+                          <span class="input-group-addon pixelfix"><span class="glyphicon glyphicon-calendar"></span> Начало</span>
                           <input type="text" name="pick-up-date" id="pick-up-date" class="form-control datepicker" placeholder="mm/dd/yyyy">
                         </div>
                       </div>
@@ -250,7 +253,7 @@
                     <div class="datetime drop-off">
                       <div class="date pull-left">
                         <div class="input-group">
-                          <span class="input-group-addon pixelfix"><span class="glyphicon glyphicon-calendar"></span> Drop-off</span>
+                          <span class="input-group-addon pixelfix"><span class="glyphicon glyphicon-calendar"></span> Окончание</span>
                           <input type="text" name="drop-off-date" id="drop-off-date" class="form-control datepicker" placeholder="mm/dd/yyyy">
                         </div>
                       </div>
@@ -308,11 +311,12 @@
                           </select>
                         </div>
                       </div>
-                      <div class="clearfix"></div>
+                      <div class="clearfix"></div>					  
+					<span style="color:#716d6e; font-weight:bold">Вы в любой момент сможете продлить аренду.</a>
                     </div>
                     <!-- Drop-off date/time end -->
 
-                    <input type="submit" class="submit" name="submit" value="continue car reservation" id="checkoutModalLabel">
+                    <input type="submit" class="submit" name="submit" value="забронировать!" id="checkoutModalLabel">
                   </form>
 
                 </div>
@@ -328,7 +332,7 @@
           <section id="vehicles" class="container">
             <div class="row">
               <div class="col-md-12">
-                <h2 class="title wow fadeInDown" data-wow-offset="200">Автопарк - <span class="subtitle">Our rental fleet at a glance</span></h2>
+                <h2 class="title wow fadeInDown" data-wow-offset="200">Автопарк - <span class="subtitle">Наши лучшие предложения</span></h2>
               </div>
 
               <!-- Vehicle nav start -->
@@ -618,7 +622,7 @@
         <section id="services" class="container">
           <div class="row">
             <div class="col-md-12 title">
-              <h2>Customer Services</h2>
+              <h2>Услуги</h2>
               <span class="underline">&nbsp;</span>
             </div>
 
@@ -780,7 +784,7 @@
                 <div class="location-select">
                   <div class="row">
                     <div class="col-md-6">
-                      <h2>Car Rental Locations</h2>
+                      <h2>Наши офисы</h2>
                     </div>
                     <div class="col-md-6">
                       <div class="styled-select-location">
