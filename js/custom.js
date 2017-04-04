@@ -71,9 +71,9 @@ $("#vehicle-nav-container a").each(function() {
 });
 
 $(".vehicle-data-select").change(function(){
-  $(activeVehicleData).fadeOut( "slow", function() {
+  $(activeVehicleData).fadeOut( 1000, function() {
     activeVehicleData = $(".vehicle-data-select").val();
-    $(activeVehicleData).fadeIn("slow", function() {});
+    $(activeVehicleData).fadeIn( 1000, function() {});
   });
 
   return false;

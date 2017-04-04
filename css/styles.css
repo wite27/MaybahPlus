@@ -615,8 +615,8 @@ header.large .brand {
   background-color: #e3e2e2;
   margin-bottom: 1px;
   position: relative;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
 }
 #vehicles .vehicle-nav li span {
   width: 0px;
@@ -628,8 +628,8 @@ header.large .brand {
   position: absolute;
   right: -10px;
   top: 20px;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.05s;
+  transition: 0.05s;
 }
 #vehicles .vehicle-nav li:hover {
   background-color: #d1cece;
