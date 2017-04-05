@@ -4,7 +4,7 @@
 // Config 
 //-------------------------------------------------------------
 
-var companyName = "Car Rental Station"; // Enter your event title
+var companyName = "Майбах+"; // Enter your event title
 
 
 // Initialize Tooltip  
@@ -24,14 +24,14 @@ $('input, textarea').placeholder();
 // Toggle Header / Nav  
 //-------------------------------------------------------------
 
-$(document).on("scroll",function(){
-  if($(document).scrollTop()>39){
-    $("header").removeClass("large").addClass("small");
-  }
-  else{
-    $("header").removeClass("small").addClass("large");
-  }
-});
+// $(document).on("scroll",function(){
+  // if($(document).scrollTop()>39){
+    // $("header").removeClass("large").addClass("small");
+  // }
+  // else{
+    // $("header").removeClass("small").addClass("large");
+  // }
+// });
 
 
 

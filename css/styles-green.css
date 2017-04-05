@@ -120,6 +120,7 @@ header {
   top: 0;
   z-index: 100;
   background-color: #fff;
+  position: fixed;
 }
 header .box {
   margin: 0 auto;
@@ -229,8 +230,8 @@ header.large .brand {
 /* Teaser
 -------------------------------------*/
 #teaser {
-  height: 600px;
-  padding: 60px 0;
+  height: 680px;
+  padding: 140px 0;
   background-color: #d2dbd2;
   background: linear-gradient(to bottom, #d2dbd2 0%, #e1e8e1 50%, #d2dbd2 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@mainColor', endColorstr='@mainColor', GradientType=0);
