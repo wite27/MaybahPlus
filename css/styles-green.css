@@ -330,6 +330,7 @@ header.large .brand {
   font-weight: bold;
   margin: 10px 0;
   display: block;
+  text-decoration: underline;
 }
 #teaser form .date {
   width: 240px;
