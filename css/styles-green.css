@@ -173,7 +173,7 @@ header .navbar-default {
   border-radius: 0;
   font-size: 18px;
   font-weight: bold;
-  margin-top: 10px;
+  margin-top: 19px;
 }
 header .navbar-brand {
   display: none;
@@ -206,7 +206,7 @@ header .navbar-default .navbar-nav > li > a:hover {
   margin-right: -9px;
 }
 header.small {
-  height: 63px;
+  height: 80px;
   box-shadow: 0 0px 14px -2px #808080;
 }
 header.small .header-info {
