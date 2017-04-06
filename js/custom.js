@@ -47,9 +47,9 @@ $(".vehicle-nav li").on("click", function(){
   $(".vehicle-nav .active").removeClass("active");
   $(this).addClass('active');
 
-  $(activeVehicleData).fadeOut( "slow", function() {
+  $(activeVehicleData).fadeOut( 300, function() {
     activeVehicleData = $(".vehicle-nav .active a").attr("href");
-    $(activeVehicleData).fadeIn("slow", function() {});
+    $(activeVehicleData).fadeIn(1000, function() {});
   });
 
   return false;
