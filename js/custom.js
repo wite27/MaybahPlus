@@ -186,11 +186,6 @@ scrollTo.click( function(event) {
   var position = $(document).scrollTop();
   var scrollOffset = 110;
 
-  if(position < 39)
-  {
-    scrollOffset = 260;
-  }
-
   var marker = $(this).attr('href');
   $('html, body').animate({ scrollTop: $(marker).offset().top - scrollOffset}, 'slow');
 
