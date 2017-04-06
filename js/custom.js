@@ -340,7 +340,7 @@ $( "#car-select-form" ).submit(function() {
   }
   else
   {
-    $('#car-select-form-msg').css('visibility','visible').hide().fadeIn().removeClass('hidden').delay(2000).fadeOut();
+    $('#car-select-form-msg').css('visibility','visible').hide().fadeIn().removeClass('hidden');
   }
 
   return false;
