@@ -25,3 +25,8 @@
   background-color: #088c18;
   margin: 0 auto;
 }
+
+header .brand .subtitle{
+	font-size: 12px;
+	text-transform: uppercase;
+}
