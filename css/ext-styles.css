@@ -4,3 +4,24 @@
 .offices  li{
 	font-size: 20px;
 }
+
+#offices_section {
+  margin-top: 65px;
+}
+#offices_section .title {
+  margin-bottom: 38px;
+}
+#offices_section h2 {
+  font-size: 46px;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+#offices_section .underline {
+  height: 4px;
+  width: 135px;
+  display: block;
+  background-color: #088c18;
+  margin: 0 auto;
+}
