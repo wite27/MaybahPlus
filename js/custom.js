@@ -40,13 +40,13 @@ $('input, textarea').placeholder();
 
 $(".vehicle-data").hide();
 var activeVehicleData = $(".vehicle-nav .active a").attr("href");
-$(activeVehicleData).show(); 
+$(activeVehicleData).show();
 
 $(".vehicle-nav li").on("click", function(){
 
   $(".vehicle-nav .active").removeClass("active");
   $(this).addClass('active');
-
+  
   $(activeVehicleData).fadeOut( 300, function() {
     activeVehicleData = $(".vehicle-nav .active a").attr("href");
     $(activeVehicleData).fadeIn(1000, function() {});
@@ -55,7 +55,19 @@ $(".vehicle-nav li").on("click", function(){
   return false;
 });
 
+// Color Selector 
+//-------------------------------------------------------------
 
+$(".color-selector-container div").on("click", function(){
+	$(activeVehicleData + " .color-selector-container .active").removeClass("active");	
+	selectedColor = $(this).attr("class").split("-")[2]; // color-selector-black, for example
+	regexpPatter = /(black|white|red|green|blue)/g;
+	var activeImage = $(activeVehicleData + " .vehicle-img img");
+	newVehiclePath = activeImage.attr("src").replace(regexpPatter, selectedColor);
+	activeImage.attr("src", newVehiclePath);
+	$(this).addClass("active");
+	return false;
+});
 
 // Vehicles Responsive Nav  
 //-------------------------------------------------------------

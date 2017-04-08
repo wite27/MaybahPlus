@@ -37,6 +37,8 @@ header .brand .subtitle{
 	-webkit-justify-content: center;
 	display: flex;
 	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
 	margin-top: 10px;
 }
 .color-selector-black, .color-selector-white, .color-selector-red, .color-selector-green, .color-selector-blue{
@@ -47,6 +49,14 @@ header .brand .subtitle{
 	margin: 10px;
 }
 
+.color-selector-container .active
+{
+	display: inline-block;
+	 width: 60px;
+	height: 60px;
+	outline: 6px solid #31DE43;
+	margin: 12px;
+}
 .color-selector-black{
 	background: black;
 }
@@ -54,7 +64,7 @@ header .brand .subtitle{
 	background: white;
 }
 .color-selector-red{
-	background: red;
+	background: #EF1313;
 }
 .color-selector-green{
 	background: green;
@@ -62,3 +72,9 @@ header .brand .subtitle{
 .color-selector-blue{
 	background: blue;
 }
+
+
+a {
+	outline: none  !important; /* Убираем границу вокруг ссылок  */
+}
+  
