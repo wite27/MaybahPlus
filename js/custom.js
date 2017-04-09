@@ -421,3 +421,37 @@ function validateNotEmpty(data){
   }
 }
 
+// Filters setting
+$( "#white-color-filter" ).click(function() {
+  addFilter({"carColor" : "white"});
+  return false;
+});
+
+var currentFilters = {};
+var isEmpty = false;
+function addFilter(filter)
+{
+	for (key in filter)
+	{
+		currentFilters[key] = filter[key];
+	}
+	isEmpty = true;
+	appendFilters(currentFilters);
+}
+// Filtering cars
+function appendFilters(filters){
+	currentFilters = filters;
+	$("#car-choice .filter-results").find(".filter-results-item").each(function()
+	{
+		for(filterKey in filters)
+		{
+			if ($(this).data(filterKey) !== filters[filterKey])
+			{
+				$(this).slideUp();
+				return;
+			}
+		}
+		this.show();
+		isEmpty = true;
+	});
+}
