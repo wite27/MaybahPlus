@@ -437,6 +437,13 @@ function addFilter(filter)
 	}
 	isEmpty = true;
 	appendFilters(currentFilters);
+	if (isEmpty)
+	{
+		$(".filter-results-fail").addClass("active");
+	} else
+	{		
+		$(".filter-results-fail").removeClass("active");
+	}
 }
 // Filtering cars
 function appendFilters(filters){
