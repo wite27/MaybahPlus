@@ -77,4 +77,106 @@ header .brand .subtitle{
 a {
 	outline: none  !important; /* Убираем границу вокруг ссылок  */
 }
-  
+
+/* Car choosing */
+
+#car-choice {
+  margin-top: 65px;
+}
+#car-choice .title {
+  margin-bottom: 38px;
+}
+#car-choice h2 {
+  font-size: 46px;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 25px 0;
+  padding: 0;
+}
+#car-choice h3{
+  font-size: 22px;
+  font-weight: 900;
+  text-align: center;
+  margin: 0;
+  padding: 10px 0 10px 0;
+  background-color: #088c18;
+  color: #fff;
+}
+#car-choice .underline {
+  height: 4px;
+  width: 135px;
+  display: block;
+  background-color: #088c18;
+  margin: 0 auto;
+}
+#car-choice .filters-box{
+  background-color: #ededed;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+/* Filters */
+
+.filters-box .filter-item{
+	padding: 10px 5px 10px 5px;
+}
+
+/* Filtered cars - searching result */
+#car-choice .filter-results{	
+	background-color: #ededed;
+}
+#car-choice .filter-results .filter-results-item{
+	padding: 3px 3px 3px 3px;
+	margin: 10px 10px 10px 10px;
+	background-color: #f5f5f5;
+}
+#car-choice .filter-results-item .filter-results-item-img img{	
+	max-width: 100%;
+	max-height: 100%;
+}
+#car-choice .filter-results-item .filter-results-item-title h4{
+	font-weight: bold;
+	margin: 3px 0px 3px 0px;
+}
+#car-choice .filter-results-item .filter-results-item-description .filter-results-item-price{
+}
+/* Selected car */
+
+#car-choice .vehicle-price {
+  background-color: #088c18;
+  height: 44.2px;
+  line-height: 44.2px;
+  padding: 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+}
+#car-choice .vehicle-price .info {
+  font-weight: normal;
+  font-size: 14px;
+}
+#car-choice .reserve-button {
+  background-color: #088c18;
+  color: #fff;
+  display: block;
+  height: 50px;
+  line-height: 51px;
+  font-size: 18px;
+  font-weight: 900;
+  padding: 0 15px;
+  box-shadow: 6px 6px 0 #efe9e9;
+  text-transform: uppercase;
+  transition: .2s;
+}
+#car-choice .reserve-button:hover {
+  background-color: #716d6e;
+}
+#car-choice .reserve-button span {
+  margin-right: 7px;
+}
+#car-choice .selected-car-image img {
+	max-width: 100%;
+	max-height: 100%;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
