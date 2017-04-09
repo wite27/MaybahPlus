@@ -134,6 +134,7 @@ a {
 /* Filtered cars - searching result */
 #car-choice .filter-results{	
 	background-color: #ededed;
+	padding-bottom: 5px;
 }
 #car-choice .filter-results .filter-results-item{
 	padding: 3px 3px 3px 3px;
