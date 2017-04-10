@@ -55,19 +55,6 @@ $(".vehicle-nav li").on("click", function(){
   return false;
 });
 
-// Color Selector 
-//-------------------------------------------------------------
-
-$(".color-selector-container div").on("click", function(){
-	$(activeVehicleData + " .color-selector-container .active").removeClass("active");	
-	selectedColor = $(this).attr("class").split("-")[2]; // color-selector-black, for example
-	regexpPatter = /(black|white|red|green|blue)/g;
-	var activeImage = $(activeVehicleData + " .vehicle-img img");
-	newVehiclePath = activeImage.attr("src").replace(regexpPatter, selectedColor);
-	activeImage.attr("src", newVehiclePath);
-	$(this).addClass("active");
-	return false;
-});
 
 // Vehicles Responsive Nav  
 //-------------------------------------------------------------
@@ -422,22 +409,39 @@ function validateNotEmpty(data){
 }
 
 // Filters setting
-$( "#white-color-filter" ).click(function() {
-  addFilter({"color" : "white"});
-  return false;
-});
 
-var currentFilters = {};
+// Assign color filters to their divs, i.e. #white-color-filter
+var colors = ["white", "black", "green", "blue", "red"];
+var selectedColors = new Object();
+colors.forEach(assignColorFilter);
+
+function assignColorFilter(color){
+	selectedColors[color] = false;
+	$("#" + color + "-color-filter").click(function(){
+		if ($(this).hasClass("active"))
+		{
+			$(this).removeClass("active");
+			selectedColors[color] = false;
+		} else
+		{
+			$(this).addClass("active");
+			selectedColors[color] = true;
+		}
+		return false;
+	});
+}
+// Color Selector 
+
+//-------------------------------------------------------------
+
 var isEmpty = false;
-function addFilter(filter)
+var allCars = $("#car-choice .filter-results").find(".filter-results-item");
+function appendFilters()
 {
-	for (key in filter)
-	{
-		currentFilters[key] = filter[key];
-	}
 	isEmpty = true;
-	appendFilters(currentFilters);
-	if (!isEmpty)
+	appendFilters_();
+	alert("lel");
+	if (isEmpty)
 	{
 		$(".filter-results-fail").addClass("active");
 	} else
@@ -445,22 +449,38 @@ function addFilter(filter)
 		$(".filter-results-fail").removeClass("active");
 	}
 }
+function resetFilters()
+{
+	isEmpty = false;
+	$(".filter-results-fail").removeClass("active");
+	for (key in selectedColors)
+	{
+		selectedColors[key] = false;
+		$("#" + key + "-color-filter").removeClass("active");
+	}
+	$("#price-from").val(1000);
+	$("#price-to").val(10000);
+	for (car in allCars)
+	{
+		$(allCars[car]).show();
+	}
+}
 // Filtering cars
-function appendFilters(filters){
-	allCars = $("#car-choice .filter-results").find(".filter-results-item");
+function appendFilters_(colorsMap, minPrice, maxPrice){
+	minPrice = $("#price-from").val();
+	maxPrice = $("#price-to").val();
 	outer:
 	for (car in allCars)
 	{
-		for(filterKey in filters)
+		carDataset = allCars[car].dataset;
+		if (selectedColors[carDataset["color"]] === false || 
+			carDataset["price"] < minPrice ||
+			carDataset["price"] > maxPrice)
 		{
-			currentCarData = allCars[car].dataset[filterKey];
-			if (currentCarData !== filters[filterKey])
-			{
-				$(allCars[car]).slideUp();
-				continue outer;
-			}
+			$(allCars[car]).slideUp();
+			continue outer;
 		}
 		$(allCars[car]).show();
 		isEmpty = false;
-	};
+	}
 }

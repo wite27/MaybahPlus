@@ -39,23 +39,24 @@ header .brand .subtitle{
 	justify-content: center;
 	-webkit-align-items: center;
 	align-items: center;
-	margin-top: 10px;
+}
+.color-selector-container div{
+	cursor: pointer;
 }
 .color-selector-black, .color-selector-white, .color-selector-red, .color-selector-green, .color-selector-blue{
 	display: inline-block;
-	 width: 50px;
-	height: 50px;
-	outline: 4px solid #ccc;
-	margin: 10px;
+	 width: 30px;
+	height: 30px;
+	outline: 2px solid #ccc;
+	margin: 5px 6px 5px 6px;
 }
 
 .color-selector-container .active
 {
 	display: inline-block;
-	 width: 60px;
-	height: 60px;
-	outline: 6px solid #31DE43;
-	margin: 12px;
+	 width: 30px;
+	height: 30px;
+	outline: 4px solid #31DE43;
 }
 .color-selector-black{
 	background: black;
@@ -121,6 +122,11 @@ a {
 	padding: 10px 5px 10px 5px;
 }
 
+.filters-box .filter-buttons{
+	margin: 10px 10px 10px 10px;
+	padding: 10px 10px 10px 10px;
+	text-align: center;
+}
 #car-choice .filter-results .filter-results-fail{
 	font-size: 18px;
 	text-align: center;
