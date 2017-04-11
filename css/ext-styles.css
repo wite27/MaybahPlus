@@ -78,6 +78,9 @@ header .brand .subtitle{
 a {
 	outline: none  !important; /* Убираем границу вокруг ссылок  */
 }
+a:hover{
+	cursor: pointer;
+}
 
 /* Car choosing */
 

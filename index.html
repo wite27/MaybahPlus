@@ -355,13 +355,10 @@
 						</div>
 						<div class = "filter-item">
 							<span class = "filter-name">Цена:</span><br>
-							<span style="margin-left:30px;">от: </span><input type="text" id="price-from" value="1000" size="7"/>
-							<span style="margin-left:5px;">до: </span><input type="text" id="price-to" value="10000" size="7"/>							
-						</div>
-						<div class = "filter-item">
-							<span class = "filter-name">Сортировка по цене:</span><br>
-							<a onclick = "sortByPriceAsc()">по возрастанию;</a>
-							<a onclick = "sortByPriceDesc()">по убыванию.</a>
+							<span style="margin-left:25px;">от: </span><input type="text" id="price-from" value="1000" size="7"/>
+							<span style="margin-left:0px;">до: </span><input type="text" id="price-to" value="10000" size="7"/>
+							<a onclick = "sortByPriceDesc()"><span class="glyphicon glyphicon-triangle-bottom" alt = "По убыванию" aria-hidden="true"></span></a>
+							<a onclick = "sortByPriceAsc()" alt = "По возрастанию"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></a>
 						</div>
 						<div class = "filter-buttons">
 							<a class="btn btn-primary" onclick="appendFilters();" style="background-color:#088c18;" role="button">Применить</a>
