@@ -139,12 +139,14 @@ a {
 
 /* Filtered cars - searching result */
 #car-choice .filter-results{	
+	display: flex;
+	flex-direction: column;
 	background-color: #ededed;
 	padding-bottom: 5px;
 }
 #car-choice .filter-results .filter-results-item{
 	padding: 3px 3px 3px 3px;
-	margin: 10px 10px 10px 10px;
+	margin: 5px 10px 5px 10px;
 	background-color: #f5f5f5;
 }
 #car-choice .filter-results-item .filter-results-item-img img{	
@@ -155,7 +157,7 @@ a {
 	font-weight: bold;
 	margin: 3px 0px 3px 0px;
 }
-#car-choice .filter-results-item .filter-results-item-description .filter-results-item-price{
+#car-choice .filter-results-item .filter-results-item-description-box .filter-results-item-price-box{
 }
 /* Selected car */
 

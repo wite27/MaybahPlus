@@ -358,6 +358,11 @@
 							<span style="margin-left:30px;">от: </span><input type="text" id="price-from" value="1000" size="7"/>
 							<span style="margin-left:5px;">до: </span><input type="text" id="price-to" value="10000" size="7"/>							
 						</div>
+						<div class = "filter-item">
+							<span class = "filter-name">Сортировка по цене:</span><br>
+							<a onclick = "sortByPriceAsc()">по возрастанию;</a>
+							<a onclick = "sortByPriceDesc()">по убыванию.</a>
+						</div>
 						<div class = "filter-buttons">
 							<a class="btn btn-primary" onclick="appendFilters();" style="background-color:#088c18;" role="button">Применить</a>
 							<a class="btn btn-default" onclick="resetFilters();" role="button">Очистить</a>
@@ -369,25 +374,30 @@
 				<!-- Filtered cars start -->
 				<div class = "col-md-6">
 					<div class = "filter-results">
-						<h3>Результаты поиска:</h3>
-						<div class = "text-warning filter-results-fail">Поиск не дал результатов, попробуйте изменить фильтры.</div>
+						<h3 style="order:-99999;">Результаты поиска:</h3>
+						<div class = "text-warning filter-results-fail" style="order:-9999;">Поиск не дал результатов, попробуйте изменить фильтры.</div>
 						<!-- Filter results item start -->
 						<div class = "filter-results-item" data-title = "ВАЗ-2101 «Жигули»" data-price = "1000" data-color-ru = "черный" data-color = "black"
 						data-car-class = "эконом" data-car-type = "седан" data-car-doors = "4" data-car-capacity = "5" data-car-baggage-capacity = "100"
 						data-car-transmission = "механика" data-car-climat = "есть" data-car-usage = "10000" data-img-src = "img/vehicles/vaz-2101-black.jpg">
 							<div class = "col-md-6" style="padding:0px 0px 0px 0px;">
 								<div class = "filter-results-item-img">
-								<img src = "img/vehicles/vaz-2101-black.jpg"></img>
+								<img src = ""></img>
 								</div>
 							</div>
 							<div class = "col-md-6">
 								<div class = "filter-results-item-title">
-								<h4>ВАЗ-2101 «Жигули»</h4>
+								<h4>data-title</h4>
 								</div>
-								<div class = "filter-results-item-description">
-								Цвет: черный <br>
-								Коробка передач: механика <br>
-								<span class = "filter-results-item-price">Цена: 1000 руб. за 24 часа</span>
+								<div class = "filter-results-item-description-box">
+								<span class = "filter-results-item-description-text">
+									Description
+								</span>
+								<span class = "filter-results-item-price-box">
+									Цена:
+									<span class = "filter-results-item-price-text">data-price</span> руб.
+									за 24 часа.
+								</span>
 								</div>
 							</div>
 							<div class = "clearfix"></div>
@@ -399,17 +409,22 @@
 						data-car-transmission = "механика" data-car-climat = "есть" data-car-usage = "10000" data-img-src = "img/vehicles/vaz-2101-white.jpg">
 							<div class = "col-md-6" style="padding:0px 0px 0px 0px;">
 								<div class = "filter-results-item-img">
-								<img src = "img/vehicles/vaz-2101-white.jpg"></img>
+								<img src = ""></img>
 								</div>
 							</div>
 							<div class = "col-md-6">
 								<div class = "filter-results-item-title">
-								<h4>ВАЗ-2101 «Жигули»</h4>
+								<h4>data-title</h4>
 								</div>
-								<div class = "filter-results-item-description">
-								Цвет: белый <br>
-								Коробка передач: механика <br>
-								<span class = "filter-results-item-price">Цена: 2000 руб. за 24 часа</span>
+								<div class = "filter-results-item-description-box">
+								<span class = "filter-results-item-description-text">
+									Description
+								</span>
+								<span class = "filter-results-item-price-box">
+									Цена:
+									<span class = "filter-results-item-price-text">data-price</span> руб.
+									за 24 часа.
+								</span>
 								</div>
 							</div>
 							<div class = "clearfix"></div>

@@ -408,6 +408,42 @@ function validateNotEmpty(data){
   }
 }
 
+var allCars = $("#car-choice .filter-results").find(".filter-results-item");
+// Setup cars
+setupCars();
+function setupCars()
+{
+	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
+	{
+		var currentCar = allCars[carIndex];
+		var currentCarDataset = currentCar.dataset;
+		$(currentCar).find(".filter-results-item-img img").attr("src", currentCarDataset["imgSrc"]);
+		$(currentCar).find(".filter-results-item-title h4").text(currentCarDataset["title"]);
+		$(currentCar).find(".filter-results-item-description-text").html(
+			"Цвет: " + currentCarDataset["colorRu"] + "<br>" +
+			"Коробока передач: " + currentCarDataset["carTransmission"] + "<br>" +
+			"Пробег: " + currentCarDataset["carUsage"] + " км" + "<br>"
+			);
+		$(currentCar).find(".filter-results-item-price-text").text(currentCarDataset["price"]);
+	}
+	sortByPriceAsc();
+}
+function sortByPriceAsc()
+{
+	sortByPrice(1);
+}
+function sortByPriceDesc()
+{
+	sortByPrice(-1);
+}
+
+function sortByPrice(direction)
+{
+	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
+	{
+		$(allCars[carIndex]).css("order", direction * (+allCars[carIndex].dataset["price"]));
+	}
+}
 // Filters setting
 
 // Assign color filters to their divs, i.e. #white-color-filter
@@ -432,8 +468,9 @@ function assignColorFilter(color){
 }
 
 var isEmpty = false;
-var allCars = $("#car-choice .filter-results").find(".filter-results-item");
-// resets all colors to false, prices to their default, and show all items
+// resets all colors to false, prices to their default,
+// sorts items by price ascending 
+// and show all items
 function resetFilters()
 {
 	isEmpty = false;
@@ -445,6 +482,7 @@ function resetFilters()
 	}
 	$("#price-from").val(1000);
 	$("#price-to").val(10000);
+	sortByPriceAsc();
 	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
 	{
 		var currentCar = $(allCars[carIndex]);
