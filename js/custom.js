@@ -446,9 +446,9 @@ function resetFilters()
 	}
 	$("#price-from").val(1000);
 	$("#price-to").val(10000);
-	for (var carIndex = 0; i < allCars.length; i++)
+	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
 	{
-		var currentCar = $(allCars[i]);
+		var currentCar = $(allCars[carIndex]);
 		currentCar.show();
 	}
 	return false;
