@@ -429,7 +429,6 @@ function assignColorFilter(color){
 		}
 		return false;
 	});
-	return false;
 }
 
 var isEmpty = false;
@@ -451,7 +450,6 @@ function resetFilters()
 		var currentCar = $(allCars[carIndex]);
 		currentCar.show();
 	}
-	return false;
 }
 
 // Color Selector 
@@ -460,7 +458,6 @@ function appendFilters()
 {
 	isEmpty = true;
 	appendFilters_();
-	alert("lel");
 	if (isEmpty)
 	{
 		$(".filter-results-fail").addClass("active");
@@ -484,28 +481,27 @@ function appendFilters_(){
 	// if there is no at least one selected color, isIgnoreColor = true
 	
 	outer:
-	for (car in allCars)
+	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
 	{
-		carDataset = allCars[car].dataset;
+		carDataset = allCars[carIndex].dataset;
 		
 		// filter by price
 		if (+carDataset["price"] < minPrice ||
 			+carDataset["price"] > maxPrice)
 		{
-			$(allCars[car]).hide();
+			$(allCars[carIndex]).hide();
 			continue outer;
 		}
 		
 		// if we dont ignore colors, filter by colors too
 		if (!isIgnoreColors && (selectedColors[carDataset["color"]] === false))
 		{
-			$(allCars[car]).hide();
+			$(allCars[carIndex]).hide();
 			continue outer;
 		}
 		
 		// if all checks passed, show it
-		$(allCars[car]).show();
+		$(allCars[carIndex]).show();
 		isEmpty = false;
 	}
-	return false;
 }
