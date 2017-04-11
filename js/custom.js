@@ -429,13 +429,33 @@ function assignColorFilter(color){
 		}
 		return false;
 	});
+	return false;
 }
-// Color Selector 
-
-//-------------------------------------------------------------
 
 var isEmpty = false;
 var allCars = $("#car-choice .filter-results").find(".filter-results-item");
+// resets all colors to false, prices to their default, and show all items
+function resetFilters()
+{
+	isEmpty = false;
+	$(".filter-results-fail").removeClass("active");
+	for (key in selectedColors)
+	{
+		selectedColors[key] = false;
+		$("#" + key + "-color-filter").removeClass("active");
+	}
+	$("#price-from").val(1000);
+	$("#price-to").val(10000);
+	for (var carIndex = 0; i < allCars.length; i++)
+	{
+		var currentCar = $(allCars[i]);
+		currentCar.show();
+	}
+	return false;
+}
+
+// Color Selector 
+//-------------------------------------------------------------
 function appendFilters()
 {
 	isEmpty = true;
@@ -448,39 +468,44 @@ function appendFilters()
 	{		
 		$(".filter-results-fail").removeClass("active");
 	}
-}
-function resetFilters()
-{
-	isEmpty = false;
-	$(".filter-results-fail").removeClass("active");
-	for (key in selectedColors)
-	{
-		selectedColors[key] = false;
-		$("#" + key + "-color-filter").removeClass("active");
-	}
-	$("#price-from").val(1000);
-	$("#price-to").val(10000);
-	for (car in allCars)
-	{
-		$(allCars[car]).show();
-	}
+	return false;
 }
 // Filtering cars
-function appendFilters_(colorsMap, minPrice, maxPrice){
+function appendFilters_(){
 	minPrice = $("#price-from").val();
 	maxPrice = $("#price-to").val();
+	isSelectedAtLeastOneColor = false;
+	for (color in selectedColors)
+	{
+		isSelectedAtLeastOneColor = 
+			isSelectedAtLeastOneColor || selectedColors[color];
+	}
+	isIgnoreColors = !isSelectedAtLeastOneColor;
+	// if there is no at least one selected color, isIgnoreColor = true
+	
 	outer:
 	for (car in allCars)
 	{
 		carDataset = allCars[car].dataset;
-		if (selectedColors[carDataset["color"]] === false || 
-			carDataset["price"] < minPrice ||
-			carDataset["price"] > maxPrice)
+		
+		// filter by price
+		if (+carDataset["price"] < minPrice ||
+			+carDataset["price"] > maxPrice)
 		{
-			$(allCars[car]).slideUp();
+			$(allCars[car]).hide();
 			continue outer;
 		}
+		
+		// if we dont ignore colors, filter by colors too
+		if (!isIgnoreColors && (selectedColors[carDataset["color"]] === false))
+		{
+			$(allCars[car]).hide();
+			continue outer;
+		}
+		
+		// if all checks passed, show it
 		$(allCars[car]).show();
 		isEmpty = false;
 	}
+	return false;
 }
