@@ -151,6 +151,7 @@ a:hover{
 	padding: 3px 3px 3px 3px;
 	margin: 5px 10px 5px 10px;
 	background-color: #f5f5f5;
+	font-size: 16px;
 }
 #car-choice .filter-results-item .filter-results-item-img img{	
 	max-width: 100%;
@@ -161,6 +162,12 @@ a:hover{
 	margin: 3px 0px 3px 0px;
 }
 #car-choice .filter-results-item .filter-results-item-description-box .filter-results-item-price-box{
+	position:absolute;
+	bottom: 0px;
+}
+#car-choice .filter-results-item .filter-results-item-description-box .filter-results-item-price-box{
+	position:absolute;
+	bottom: 0px;
 }
 /* Selected car */
 
