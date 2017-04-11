@@ -463,6 +463,7 @@ function assignColorFilter(color){
 			$(this).addClass("active");
 			selectedColors[color] = true;
 		}
+		appendFilters();
 		return false;
 	});
 }
