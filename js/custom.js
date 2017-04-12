@@ -516,7 +516,10 @@ function resetFilters()
 	$("#car-usage-from").val(0);
 	$("#car-usage-to").val(100000);
 	toggleTransmissionAny();
-	$("#transmission-any").button('toggle');
+	$("#transmission-any").prop("checked", true);
+	$("#transmission-any").parent().addClass("active");
+	$("#transmission-auto").parent().removeClass("active");
+	$("#transmission-mechanic").parent().removeClass("active");
 	sortByPriceAsc();
 	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
 	{
