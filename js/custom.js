@@ -483,6 +483,8 @@ function resetFilters()
 	}
 	$("#price-from").val(1000);
 	$("#price-to").val(10000);
+	$("#car-usage-from").val(0);
+	$("#car-usage-to").val(100000);
 	sortByPriceAsc();
 	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
 	{
@@ -510,6 +512,8 @@ function appendFilters()
 function appendFilters_(){
 	minPrice = $("#price-from").val();
 	maxPrice = $("#price-to").val();
+	minCarUsage = $("#car-usage-from").val();
+	maxCarUsage = $("#car-usage-to").val();
 	isSelectedAtLeastOneColor = false;
 	for (color in selectedColors)
 	{
@@ -526,7 +530,9 @@ function appendFilters_(){
 		
 		// filter by price
 		if (+carDataset["price"] < minPrice ||
-			+carDataset["price"] > maxPrice)
+			+carDataset["price"] > maxPrice ||
+			+carDataset["carUsage"] < minCarUsage ||
+			+carDataset["carUsage"] > maxCarUsage)
 		{
 			$(allCars[carIndex]).hide();
 			continue outer;
