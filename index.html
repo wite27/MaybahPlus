@@ -25,6 +25,7 @@
 
   <!-- Extension Styles -->
   <link href="css/ext-styles.css" rel="stylesheet">
+  <link href="css/nouislider.css" rel="stylesheet">
   
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -356,6 +357,7 @@
 						</div>
 						<div class = "filter-item">
 							<span class = "filter-name">Цена:</span><br>
+							<div id = "price-slider"></div>
 							<span style="margin-left:25px;">от: </span><input type="text" id="price-from" value="1000" size="7"/>
 							<span style="margin-left:0px;">до: </span><input type="text" id="price-to" value="10000" size="7"/>
 							<a onclick = "sortByPriceDesc()" title = "По убыванию"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
@@ -1116,8 +1118,8 @@
             </script>
         <!--<![endif]-->
 
+		<script src="js/nouislider.js"></script>
         <script src="js/custom.js"></script>
-
 
 
       </body>

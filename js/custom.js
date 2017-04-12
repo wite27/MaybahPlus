@@ -408,6 +408,20 @@ function validateNotEmpty(data){
   }
 }
 
+// Slider
+var slider = document.getElementById('price-slider');
+
+noUiSlider.create(slider, {
+	start: [1000, 10000],
+	connect: true,
+	tooltips: true,
+	range: {
+		'min': 1000,
+		'max': 10000
+	}
+});
+
+
 var allCars = $("#car-choice .filter-results").find(".filter-results-item");
 // Setup cars
 setupCars();
