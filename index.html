@@ -25,6 +25,7 @@
 
   <!-- Extension Styles -->
   <link href="css/ext-styles.css" rel="stylesheet">
+  
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -364,6 +365,20 @@
 							<span class = "filter-name">Пробег:</span><br>
 							<span style="margin-left:25px;">от: </span><input type="text" id="car-usage-from" value="0" size="7"/>
 							<span style="margin-left:0px;">до: </span><input type="text" id="car-usage-to" value="100000" size="7"/>
+						</div>
+						<div class = "filter-item">
+							<span class = "filter-name">Коробка передач:</span><br>
+							<div class="btn-group transmission-buttons-group" data-toggle="buttons">
+								<label class="btn btn-default active">
+									<input type="radio" name="transmission" id="transmission-any" autocomplete="off" checked>любая
+								</label>
+								<label class="btn btn-default">
+									<input type="radio" name="transmission" id="transmission-mechanic" autocomplete="off">механика
+								</label>
+								<label class="btn btn-default">
+									<input type="radio" name="transmission" id="transmission-auto" autocomplete="off">автомат
+								</label>
+							</div>
 						</div>
 						<div class = "filter-buttons">
 							<a class="btn btn-primary" onclick="appendFilters();" style="background-color:#088c18;" role="button">Применить</a>

@@ -125,6 +125,11 @@ a:hover{
 	padding: 10px 5px 10px 5px;
 }
 
+.filters-box .filter-item .transmission-buttons-group{
+	display: flex;
+	justify-content: center;
+}
+
 .filters-box .filter-buttons{
 	margin: 10px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;

@@ -468,6 +468,36 @@ function assignColorFilter(color){
 	});
 }
 
+var selectedTransmissions = {
+	'механика':true,
+	'автомат':true
+};
+
+$('.transmission-buttons-group input[type=radio]').on('change', function() {
+    id = this.id;
+	if (id === "transmission-mechanic") toggleTransmissionMechanic();
+	if (id === "transmission-any") toggleTransmissionAny();
+	if (id === "transmission-auto") toggleTransmissionAuto();
+	appendFilters();
+});
+function toggleTransmissionAny()
+{
+	toggleTransmission(true, true);
+}
+function toggleTransmissionMechanic()
+{
+	toggleTransmission(true, false);
+}
+function toggleTransmissionAuto()
+{
+	toggleTransmission(false, true);
+}
+function toggleTransmission(mech, auto)
+{
+	selectedTransmissions['механика'] = mech;
+	selectedTransmissions['автомат'] = auto;
+}
+
 var isEmpty = false;
 // resets all colors to false, prices to their default,
 // sorts items by price ascending 
@@ -485,6 +515,8 @@ function resetFilters()
 	$("#price-to").val(10000);
 	$("#car-usage-from").val(0);
 	$("#car-usage-to").val(100000);
+	toggleTransmissionAny();
+	$("#transmission-any").button('toggle');
 	sortByPriceAsc();
 	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
 	{
@@ -532,7 +564,8 @@ function appendFilters_(){
 		if (+carDataset["price"] < minPrice ||
 			+carDataset["price"] > maxPrice ||
 			+carDataset["carUsage"] < minCarUsage ||
-			+carDataset["carUsage"] > maxCarUsage)
+			+carDataset["carUsage"] > maxCarUsage ||
+			!selectedTransmissions[carDataset["carTransmission"]])
 		{
 			$(allCars[carIndex]).hide();
 			continue outer;
