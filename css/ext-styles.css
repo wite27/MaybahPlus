@@ -122,7 +122,7 @@ a:hover{
 /* Filters */
 
 .filters-box .filter-item{
-	padding: 10px 5px 10px 5px;
+	padding: 5px 5px 5px 5px;
 }
 
 .filters-box .filter-name{
@@ -132,9 +132,23 @@ a:hover{
 .filters-box .filter-name .active{
 	color: #0CD825;
 }
-
 #price-slider{
-	margin-top: 50px;
+	margin-top: 40px;
+}
+#price-slider .noUi-tooltip{
+	padding: 3px;
+}
+#price-slider .noUi-connect{
+	background: #088c18;	
+}
+#car-usage-slider .noUi-tooltip{
+	padding: 3px;
+}
+#car-usage-slider{
+	margin-top: 40px;
+}
+#car-usage-slider .noUi-connect{
+	background: #088c18;	
 }
 .filters-box .filter-item .transmission-buttons-group{
 	display: flex;

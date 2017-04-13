@@ -410,9 +410,26 @@ function validateNotEmpty(data){
 
 // Slider
 var priceSlider = document.getElementById('price-slider');
+var carUsageSlider = document.getElementById('car-usage-slider');
 
 noUiSlider.create(priceSlider, {
 	start: [1000, 6000],
+	margin: 1000,
+	padding: 500,
+	connect: true,
+	tooltips: true,
+	step: 100,
+	range: {
+		'min': 500,
+		'max': 6500	
+	},
+	format: wNumb({
+		decimals: 0
+	})
+});
+
+noUiSlider.create(carUsageSlider, {
+	start: [1000, 10000],
 	margin: 1000,
 	padding: 500,
 	connect: true,
