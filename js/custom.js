@@ -418,7 +418,7 @@ noUiSlider.create(priceSlider, {
 	padding: 500,
 	connect: true,
 	tooltips: true,
-	step: 100,
+	step: 250,
 	range: {
 		'min': 500,
 		'max': 6500	
@@ -429,15 +429,15 @@ noUiSlider.create(priceSlider, {
 });
 
 noUiSlider.create(carUsageSlider, {
-	start: [1000, 10000],
-	margin: 1000,
-	padding: 500,
+	start: [0, 10000],
+	margin: 2000,
+	padding: 1000,
 	connect: true,
 	tooltips: true,
-	step: 100,
+	step: 1000,
 	range: {
-		'min': 500,
-		'max': 6500	
+		'min': 0,
+		'max': 11000	
 	},
 	format: wNumb({
 		decimals: 0
