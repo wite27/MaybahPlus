@@ -151,6 +151,7 @@ a:hover{
 	background: #088c18;	
 }
 .filters-box .filter-item .transmission-buttons-group{
+	margin-top: 5px;
 	display: flex;
 	justify-content: center;
 }

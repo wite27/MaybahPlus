@@ -444,6 +444,13 @@ noUiSlider.create(carUsageSlider, {
 	})
 });
 
+priceSlider.noUiSlider.on('change', function(){
+	appendFilters();
+});
+carUsageSlider.noUiSlider.on('change', function(){
+	appendFilters();
+});
+
 function getMinPrice()
 {
 	return priceSlider.noUiSlider.get()[0];
@@ -454,11 +461,11 @@ function getMaxPrice()
 }
 function getMinCarUsage()
 {
-	return $("#car-usage-from").val();
+	return carUsageSlider.noUiSlider.get()[0];
 }
 function getMaxCarUsage()
 {
-	return $("#car-usage-to").val();
+	return carUsageSlider.noUiSlider.get()[1];
 }
 
 var allCars = $("#car-choice .filter-results").find(".filter-results-item");
@@ -568,11 +575,8 @@ function resetFilters()
 		selectedColors[key] = false;
 		$("#" + key + "-color-filter").removeClass("active");
 	}
-	$("#price-from").val(1000);
-	$("#price-to").val(10000);
 	priceSlider.noUiSlider.reset();
-	$("#car-usage-from").val(0);
-	$("#car-usage-to").val(100000);
+	carUsageSlider.noUiSlider.reset();
 	toggleTransmissionAny();
 	$("#transmission-any").prop("checked", true);
 	$("#transmission-any").parent().addClass("active");
