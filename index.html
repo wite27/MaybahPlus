@@ -402,19 +402,19 @@
 								<img src = ""></img>
 								</div>
 							</div>
-							<div class = "col-md-6" style = "height:100%;">
+							<div class = "col-md-6" style = "display:flex; flex-direction:column;">
 								<div class = "filter-results-item-title">
 								<h4>data-title</h4>
 								</div>
 								<div class = "filter-results-item-description-box">
 								<span class = "filter-results-item-description-text">
 									Description
-								</span>
+								</span>								
+								</div>
 								<div class = "filter-results-item-price-box">
 									Цена:
 									<span class = "filter-results-item-price-text">data-price</span> руб.
 									за 24 часа.
-								</div>
 								</div>
 							</div>
 							<div class = "clearfix"></div>
@@ -429,19 +429,19 @@
 								<img src = ""></img>
 								</div>
 							</div>
-							<div class = "col-md-6" style = "height:100%;">
+							<div class = "col-md-6" style = "display:flex; flex-direction:column;">
 								<div class = "filter-results-item-title">
 								<h4>data-title</h4>
 								</div>
 								<div class = "filter-results-item-description-box">
 								<span class = "filter-results-item-description-text">
 									Description
-								</span>
+								</span>								
+								</div>
 								<div class = "filter-results-item-price-box">
 									Цена:
 									<span class = "filter-results-item-price-text">data-price</span> руб.
 									за 24 часа.
-								</div>
 								</div>
 							</div>
 							<div class = "clearfix"></div>
@@ -456,19 +456,19 @@
 								<img src = ""></img>
 								</div>
 							</div>
-							<div class = "col-md-6" style = "height:100%;">
+							<div class = "col-md-6" style = "display:flex; flex-direction:column;">
 								<div class = "filter-results-item-title">
 								<h4>data-title</h4>
 								</div>
 								<div class = "filter-results-item-description-box">
 								<span class = "filter-results-item-description-text">
 									Description
-								</span>
+								</span>								
+								</div>
 								<div class = "filter-results-item-price-box">
 									Цена:
 									<span class = "filter-results-item-price-text">data-price</span> руб.
 									за 24 часа.
-								</div>
 								</div>
 							</div>
 							<div class = "clearfix"></div>
@@ -483,19 +483,19 @@
 								<img src = ""></img>
 								</div>
 							</div>
-							<div class = "col-md-6" style = "height:100%;">
+							<div class = "col-md-6" style = "display:flex; flex-direction:column;">
 								<div class = "filter-results-item-title">
 								<h4>data-title</h4>
 								</div>
 								<div class = "filter-results-item-description-box">
 								<span class = "filter-results-item-description-text">
 									Description
-								</span>
+								</span>								
+								</div>
 								<div class = "filter-results-item-price-box">
 									Цена:
 									<span class = "filter-results-item-price-text">data-price</span> руб.
 									за 24 часа.
-								</div>
 								</div>
 							</div>
 							<div class = "clearfix"></div>
@@ -505,44 +505,52 @@
 					</div>
 				</div>
 				<div class = "col-md-3">
-					<div class = "selected-car-box">
-						<div class="vehicle-price">car-price руб. <span class="info">за 24 часа</span>
+					<div id = "selected-car-box">
+						<div class = "selected-car-title-box">
+							<span id = "selected-car-title">car-title</span>
 						</div>
 						<div class="selected-car-image">
 						<img src = "img/vehicles/vaz-2101-black.jpg"></img>
 						</div>
+						<div class="vehicle-price">
+							<span id = "selected-car-price">car-price</span> руб. <span class="info">за 24 часа</span>
+						</div>
 						<table class="table vehicle-features">
 							<tr>
 								<td>Класс</td>
-								<td>car-class</td>
+								<td><span id = "selected-car-class">car-class</span></td>
 							</tr>
 							<tr>
 								<td>Тип кузова</td>
-								<td>car-type</td>
+								<td><span id = "selected-car-type">car-type</span></td>
+							</tr>
+							<tr>
+								<td>Цвет кузова</td>
+								<td><span id = "selected-car-color">car-color</span></td>
 							</tr>
 							<tr>
 								<td>Кол-во дверей</td>
-								<td>car-doors</td>
+								<td><span id = "selected-car-doors">car-doors</span></td>
 							</tr>
 							<tr>
 								<td>Кол-во мест</td>
-								<td>car-capacity</td>
+								<td><span id = "selected-car-capacity">car-capacity</span></td>
 							</tr>
 							<tr>
 								<td>Вместимость багажа</td>
-								<td>car-baggage-capacity</td>
+								<td><span id = "selected-car-baggage-capacity">car-baggage-capacity</span></td>
 							</tr>
 							<tr>
 								<td>Коробка передач</td>
-								<td>car-transmission</td>
+								<td><span id = "selected-car-transmission">car-transmission</span></td>
 							</tr>
 							<tr>
 								<td>Климат-контроль</td>
-								<td>car-climat</td>
+								<td><span id = "selected-car-climat">car-climat</span></td>
 							</tr>
 							<tr>
 								<td>Пробег</td>
-								<td>car-usage</td>
+								<td><span id = "selected-car-usage">car-usage</span></td>
 							</tr>
 						</table>
 						<a href="#teaser" class="reserve-button scroll-to"><span class="glyphicon glyphicon-calendar"></span> Забронировать</a>

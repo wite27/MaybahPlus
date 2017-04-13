@@ -483,10 +483,19 @@ function setupCars()
 			"Цвет: " + currentCarDataset["colorRu"] + "<br>" +
 			"Коробока передач: " + currentCarDataset["carTransmission"] + "<br>" +
 			"Пробег: " + currentCarDataset["carUsage"] + " км" + "<br>"
+			+ "<br>"
 			);
 		$(currentCar).find(".filter-results-item-price-text").text(currentCarDataset["price"]);
+		bindCarOnClick(currentCar, currentCarDataset);
 	}
 	sortByPriceAsc();
+}
+function bindCarOnClick(car, carDataset)
+{
+	$(car).on('click', function(){
+			updateSelectedCar(carDataset);
+			return false;
+		});
 }
 function sortByPriceAsc()
 {
@@ -646,6 +655,32 @@ function appendFilters_(){
 		
 		// if all checks passed, show it
 		$(allCars[carIndex]).show();
+		updateSelectedCar(allCars[carIndex].dataset);
 		isEmpty = false;
 	}
+}
+
+// Select the car
+function updateSelectedCar(newCarDataset)
+{
+	selectedCarBox = document.getElementById('selected-car-box');
+	$(selectedCarBox).find("img").attr("src", newCarDataset["imgSrc"]);	
+	$(selectedCarBox).find("#selected-car-price").text(newCarDataset["price"]);	
+	$(selectedCarBox).find("#selected-car-title").text(newCarDataset["title"]);
+	$(selectedCarBox).find("#selected-car-color").text(newCarDataset["colorRu"]);
+	$(selectedCarBox).find("#selected-car-class").text(newCarDataset["carClass"]);
+	$(selectedCarBox).find("#selected-car-type").text(newCarDataset["carType"]);
+	$(selectedCarBox).find("#selected-car-doors").text(newCarDataset["carDoors"]);
+	$(selectedCarBox).find("#selected-car-capacity").text(newCarDataset["carCapacity"]);
+	$(selectedCarBox).find("#selected-car-baggage-capacity").text(newCarDataset["carBaggageCapacity"] + " кг.");
+	$(selectedCarBox).find("#selected-car-transmission").text(newCarDataset["carTransmission"]);
+	$(selectedCarBox).find("#selected-car-climat").text(newCarDataset["carClimat"]);
+	$(selectedCarBox).find("#selected-car-usage").text(newCarDataset["carUsage"] + " км.");
+		// $(currentCar).find(".filter-results-item-title h4").text(currentCarDataset["title"]);
+		// $(currentCar).find(".filter-results-item-description-text").html(
+			// "Цвет: " + currentCarDataset["colorRu"] + "<br>" +
+			// "Коробока передач: " + currentCarDataset["carTransmission"] + "<br>" +
+			// "Пробег: " + currentCarDataset["carUsage"] + " км" + "<br>"
+			// + "<br>"
+			// );
 }

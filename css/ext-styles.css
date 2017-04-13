@@ -161,12 +161,12 @@ a:hover{
 	padding: 10px 10px 10px 10px;
 	text-align: center;
 }
-.filters-box .filter-buttons .reset-filter-button{
-	background-color:#088c18;
+/* .filters-box .filter-buttons .reset-filter-button{
+	background-color:#FFCC00;
 }
 .filters-box .filter-buttons .reset-filter-button:hover{
-	background-color: #05590F;
-}
+	background-color: #CC4A14;
+} */
 #car-choice .filter-results .filter-results-fail{
 	font-size: 18px;
 	text-align: center;
@@ -198,16 +198,26 @@ a:hover{
 	font-weight: bold;
 	margin: 3px 0px 3px 0px;
 }
-#car-choice .filter-results-item .filter-results-item-description-box .filter-results-item-price-box{
-	position:absolute;
-	bottom: 0px;
+#car-choice .filter-results-item:hover{
+	transition: 0.2s;
+	background-color: #FFFFFF;
+	cursor: pointer;
+	filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
 }
 #car-choice .filter-results-item .filter-results-item-description-box .filter-results-item-price-box{
-	position:absolute;
-	bottom: 0px;
+
 }
 /* Selected car */
-
+#car-choice .selected-car-title-box
+{
+  background-color: #088c18;
+  height: 44.2px;
+  line-height: 44.2px;
+  padding: 0px 3px 0px 3px;
+  font-size: 24px;
+  font-weight: 900;
+  color: #fff;
+}
 #car-choice .vehicle-price {
   background-color: #088c18;
   height: 44.2px;
@@ -222,7 +232,7 @@ a:hover{
   font-size: 14px;
 }
 #car-choice .reserve-button {
-  background-color: #088c18;
+  background-color: #A62815;
   color: #fff;
   display: block;
   height: 50px;
@@ -235,7 +245,7 @@ a:hover{
   transition: .2s;
 }
 #car-choice .reserve-button:hover {
-  background-color: #716d6e;
+  background-color: #CC4A14;
 }
 #car-choice .reserve-button span {
   margin-right: 7px;
