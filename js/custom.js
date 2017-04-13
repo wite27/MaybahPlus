@@ -412,15 +412,15 @@ function validateNotEmpty(data){
 var priceSlider = document.getElementById('price-slider');
 
 noUiSlider.create(priceSlider, {
-	start: [1000, 10000],
-	margin: 2000,
-	padding: 1000,
+	start: [1000, 6000],
+	margin: 1000,
+	padding: 500,
 	connect: true,
 	tooltips: true,
 	step: 100,
 	range: {
-		'min': 0,
-		'max': 11000
+		'min': 500,
+		'max': 6500	
 	},
 	format: wNumb({
 		decimals: 0
@@ -429,11 +429,11 @@ noUiSlider.create(priceSlider, {
 
 function getMinPrice()
 {
-	return $("#price-from").val();	
+	return priceSlider.noUiSlider.get()[0];
 }
 function getMaxPrice()
 {
-	return $("#price-to").val();
+	return priceSlider.noUiSlider.get()[1];
 }
 function getMinCarUsage()
 {
@@ -466,10 +466,14 @@ function setupCars()
 }
 function sortByPriceAsc()
 {
+	$("#sort-by-price-asc").addClass("active");
+	$("#sort-by-price-desc").removeClass("active");
 	sortByPrice(1);
 }
 function sortByPriceDesc()
 {
+	$("#sort-by-price-desc").addClass("active");
+	$("#sort-by-price-asc").removeClass("active");
 	sortByPrice(-1);
 }
 

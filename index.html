@@ -356,12 +356,12 @@
 							</div>
 						</div>
 						<div class = "filter-item">
-							<span class = "filter-name">Цена:</span><br>
-							<div id = "price-slider"></div>
-							<span style="margin-left:25px;">от: </span><input type="text" id="price-from" value="1000" size="7"/>
-							<span style="margin-left:0px;">до: </span><input type="text" id="price-to" value="10000" size="7"/>
-							<a onclick = "sortByPriceDesc()" title = "По убыванию"><span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span></a>
-							<a onclick = "sortByPriceAsc()" title = "По возрастанию"><span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span></a>
+							<span class = "filter-name">
+								Цена:
+								<a onclick = "sortByPriceAsc()" title = "По возрастанию"><span class="glyphicon glyphicon-sort-by-attributes active" id = "sort-by-price-asc" aria-hidden="true"></span></a>
+								<a onclick = "sortByPriceDesc()" title = "По убыванию"><span class="glyphicon glyphicon-sort-by-attributes-alt" id = "sort-by-price-desc" aria-hidden="true"></span></a>
+							</span>
+							<div id = "price-slider"></div>							
 						</div>
 						<div class = "filter-item">
 							<span class = "filter-name">Пробег:</span><br>
