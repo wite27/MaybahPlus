@@ -242,7 +242,7 @@ header.large .brand {
   box-shadow: 0 9px 0px 0px #ffffff, 0 -9px 0px 0px #ffffff, 7px 0 15px -4px rgba(0, 0, 0, 0.3), -7px 0 15px -4px rgba(0, 0, 0, 0.3);
 }
 #teaser form {
-  padding: 34px;
+  padding: 15px 15px 15px 15px;
 }
 #teaser form .alert {
   margin-top: -20px;
@@ -264,7 +264,7 @@ header.large .brand {
   border: 2px solid #efe9e9;
   height: 55px;
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 10px;
 }
 #teaser form .styled-select-car:after {
   content: '';
@@ -289,10 +289,10 @@ header.large .brand {
   outline: none;
 }
 #teaser form .location {
-  margin-bottom: 27px;
+  margin-bottom: 15px;
 }
 #teaser form .datetime {
-  margin-bottom: 11px;
+  margin-bottom: 5px;
 }
 #teaser form .form-control {
   height: 43px;
@@ -328,15 +328,15 @@ header.large .brand {
 #teaser form .different-drop-off {
   color: #716d6e;
   font-weight: bold;
-  margin: 10px 0;
+  margin: 3px 0;
   display: block;
   text-decoration: underline;
 }
 #teaser form .date {
-  width: 240px;
+  width: 290px;
 }
 #teaser form .time {
-  width: 140px;
+  width: 135px;
 }
 #teaser form .pixelfix {
   border-top: 1px solid #fff;

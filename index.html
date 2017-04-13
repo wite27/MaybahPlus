@@ -11,7 +11,7 @@
 
   <!-- Bootstrap -->
   <link href="css/animate.css" rel="stylesheet">
-
+<link href = "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css" rel = "stylesheet">
   <!-- Google Font Lato -->
   <link href='http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/font-awesome.min.css">
@@ -94,7 +94,7 @@
                 <!-- Nav-Links start -->
                 <ul class="nav navbar-nav navbar-right">
                   <li class="active"><a href="#" class="scroll-to">Главная</a></li>
-                  <li><a href="#vehicles" class="scroll-to">Автопарк</a></li>
+                  <li><a href="#car-choice" class="scroll-to">Автопарк</a></li>
                   <li><a href="#services" class="scroll-to">Услуги</a></li>
                   <li><a href="#reviews" class="scroll-to">Отзывы</a></li>
                   <li><a href="#offices_section" class="scroll-to">Адреса</a></li>
@@ -150,33 +150,41 @@
               </div>
               <div class="col-md-5 col-xs-12 pull-left">
                 <div class="reservation-form-shadow">
-
                   <form action="#" method="post" name="	" id="car-select-form">
 
                     <div class="alert alert-danger hidden" id="car-select-form-msg">
                       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
                       <strong>Внимание:</strong> Все поля обязательны!
                     </div>
-
-                    <!-- Car select start -->
-                    <div class="styled-select-car">
-                      <select name="car-select" id="car-select">
-                        <option value="">Выберите автомобиль</option>
-                        <option value="img/vehicle1.jpg">Автомобиль 1</option>
-                        <option value="img/vehicle2.jpg">Автомобиль 2</option>
-                        <option value="img/vehicle3.jpg">Автомобиль 3</option>
-                        <option value="img/vehicle4.jpg">Автомобиль 4</option>
-                        <option value="img/vehicle5.jpg">Автомобиль 5</option>
-                        <option value="img/vehicle6.jpg">Автомобиль 6</option>
-                      </select>
-                    </div>
+					
+					<!-- Car select start -->
+					<div class = "select-car-box">
+						<select class="selectpicker show-tick" data-width="100%" data-size="6" name="car-select" id="car-select">
+						<option value="">Выберите автомобиль</option>
+							<option value="img/vehicles/vaz-2101-black.jpg">ВАЗ-2101 «Жигули» чёрный</option>
+							<option value="img/vehicles/vaz-2101-white.jpg">ВАЗ-2101 «Жигули» белый</option>
+							<option value="img/vehicles/vaz-2101-red.jpg">ВАЗ-2101 «Жигули» красный</option>
+							<option value="img/vehicles/vaz-2101-green.jpg">ВАЗ-2101 «Жигули» зелёный</option>
+						</select>
+					<span class = "select-car-detail"><a href="#car-choice" class="scroll-to">Подобрать автомобиль..</a></span>
+					</div>
                     <!-- Car select end -->
 
                     <!-- Pick-up location start -->
                     <div class="location">
                       <div class="input-group pick-up">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> Взять</span>
-                        <input type="text" name="pick-up-location" id="pick-up-location" class="form-control autocomplete-location" placeholder=" Введите район">
+						<div class = "select-location-box">
+						<select class="selectpicker show-tick" data-width="100%" data-size="6" name="pick-up-location" id="pick-up-location">
+						<option value="">Выберите офис проката</option>
+							<option value="Санкт-Петербург, В.О., линия 14-я, 29 ст. м. Василеостровская" data-subtext="В.О., линия 14-я, 29 ст. м. Василеостровская">Главный офис</option>
+							<option value="Невский проспект, 111, ст. м. Невский проспект" data-subtext="Невский проспект, 111, ст. м. Невский проспект">Невский район</option>
+							<option value="Московский проспект, 359, ст. м. Московские ворота" data-subtext="Московский проспект, 359, ст. м. Московские ворота">Московский район</option>
+							<option value="Улица Труда, 210, ст. м. Адмиралтейская" data-subtext="Улица Труда, 210, ст. м. Адмиралтейская">Адмиралтейский район</option>
+							<option value="Проспект Маршала Жукова, 999" data-subtext="Проспект Маршала Жукова, 999">Красносельский район</option>
+						</select>
+						</div>
+                        <!--<input type="text" name="pick-up-location" id="pick-up-location" class="form-control autocomplete-location" placeholder=" Введите район">-->
                       </div>
                       <!-- Pick-up location end -->
 
@@ -185,7 +193,16 @@
                       <!-- Drop-off location start -->
                       <div class="input-group drop-off">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> Вернуть</span>
-                        <input type="text" name="drop-off-location" id="drop-off-location" class="form-control autocomplete-location" placeholder=" Введите район">
+                        <div class = "select-location-box">
+						<select class="selectpicker show-tick" data-width="100%" data-size="6" name="drop-off-location" id="drop-off-location">
+						<option value="">Выберите офис проката</option>
+							<option value="Санкт-Петербург, В.О., линия 14-я, 29 ст. м. Василеостровская" data-subtext="В.О., линия 14-я, 29 ст. м. Василеостровская">Главный офис</option>
+							<option value="Невский проспект, 111, ст. м. Невский проспект" data-subtext="Невский проспект, 111, ст. м. Невский проспект">Невский район</option>
+							<option value="Московский проспект, 359, ст. м. Московские ворота" data-subtext="Московский проспект, 359, ст. м. Московские ворота">Московский район</option>
+							<option value="Улица Труда, 210, ст. м. Адмиралтейская" data-subtext="Улица Труда, 210, ст. м. Адмиралтейская">Адмиралтейский район</option>
+							<option value="Проспект Маршала Жукова, 999" data-subtext="Проспект Маршала Жукова, 999">Красносельский район</option>
+						</select>
+						</div>
                       </div>
                     </div>
                     <!-- Drop-off location end -->
@@ -194,7 +211,7 @@
                     <div class="datetime pick-up">
                       <div class="date pull-left">
                         <div class="input-group">
-                          <span class="input-group-addon pixelfix"><span class="glyphicon glyphicon-calendar"></span> Начало</span>
+                          <span class="input-group-addon pixelfix"><span class="glyphicon glyphicon-calendar"></span> Начало аренды</span>
                           <input type="text" name="pick-up-date" id="pick-up-date" class="form-control datepicker" placeholder="mm/dd/yyyy">
                         </div>
                       </div>
@@ -260,7 +277,7 @@
                     <div class="datetime drop-off">
                       <div class="date pull-left">
                         <div class="input-group">
-                          <span class="input-group-addon pixelfix"><span class="glyphicon glyphicon-calendar"></span> Конец</span>
+                          <span class="input-group-addon pixelfix" style = "padding-left:8px;"><span class="glyphicon glyphicon-calendar"></span> Конец аренды</span>
                           <input type="text" name="drop-off-date" id="drop-off-date" class="form-control datepicker" placeholder="mm/dd/yyyy">
                         </div>
                       </div>
@@ -319,8 +336,9 @@
                         </div>
                       </div>
                       <div class="clearfix"></div>					  
+					</div>
 					<span style="color:#716d6e; font-weight:bold">Вы в любой момент сможете <a href="#services" class="scroll-to">продлить аренду.</a>
-                    </div>
+                    
                     <!-- Drop-off date/time end -->
 
                     <input type="submit" class="submit" name="submit" value="забронировать!" id="checkoutModalLabel">
@@ -1123,6 +1141,7 @@
                 new WOW({mobile: false}).init();
             </script>
         <!--<![endif]-->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
 		<script src="js/wNumb.js"></script>
 		<script src="js/nouislider.js"></script>
         <script src="js/custom.js"></script>

@@ -256,3 +256,28 @@ a:hover{
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
+
+/* Teaser form */
+.select-car-box{
+	margin-bottom: 10px;
+}
+.select-car-box .dropdown-menu{
+	font-size: 20px;
+}
+.select-car-box .btn{
+	font-size: 20px;
+}
+.select-car-detail a{
+  color: #716d6e;
+  font-weight: bold;
+  margin: 3px 0;
+  display: block;
+  text-decoration: underline;
+}
+
+.select-location-box .dropdown-menu{
+	font-size: 20px;
+}
+.select-location-box .btn{
+	font-size: 20px;
+}
