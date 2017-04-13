@@ -489,6 +489,7 @@ function setupCars()
 		bindCarOnClick(currentCar, currentCarDataset);
 	}
 	sortByPriceAsc();
+	updateSelectedCar(allCars[0].dataset);
 }
 function bindCarOnClick(car, carDataset)
 {
@@ -655,7 +656,8 @@ function appendFilters_(){
 		
 		// if all checks passed, show it
 		$(allCars[carIndex]).show();
-		updateSelectedCar(allCars[carIndex].dataset);
+		// ? change selected car ?
+		// updateSelectedCar(allCars[carIndex].dataset);
 		isEmpty = false;
 	}
 }
