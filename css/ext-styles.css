@@ -122,7 +122,7 @@ a:hover{
 /* Filters */
 
 .filters-box .filter-item{
-	padding: 5px 5px 5px 5px;
+	padding: 10px 5px 5px 5px;
 }
 
 .filters-box .filter-name{
@@ -160,6 +160,12 @@ a:hover{
 	margin: 10px 10px 10px 10px;
 	padding: 10px 10px 10px 10px;
 	text-align: center;
+}
+.filters-box .filter-buttons .reset-filter-button{
+	background-color:#088c18;
+}
+.filters-box .filter-buttons .reset-filter-button:hover{
+	background-color: #05590F;
 }
 #car-choice .filter-results .filter-results-fail{
 	font-size: 18px;
