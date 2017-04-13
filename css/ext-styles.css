@@ -125,6 +125,10 @@ a:hover{
 	padding: 10px 5px 10px 5px;
 }
 
+#price-slider{
+	margin-top: 50px;
+	margin-bottom: 15px;
+}
 .filters-box .filter-item .transmission-buttons-group{
 	display: flex;
 	justify-content: center;

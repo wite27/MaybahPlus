@@ -409,18 +409,40 @@ function validateNotEmpty(data){
 }
 
 // Slider
-var slider = document.getElementById('price-slider');
+var priceSlider = document.getElementById('price-slider');
 
-noUiSlider.create(slider, {
+noUiSlider.create(priceSlider, {
 	start: [1000, 10000],
+	margin: 2000,
+	padding: 1000,
 	connect: true,
 	tooltips: true,
+	step: 100,
 	range: {
-		'min': 1000,
-		'max': 10000
-	}
+		'min': 0,
+		'max': 11000
+	},
+	format: wNumb({
+		decimals: 0
+	})
 });
 
+function getMinPrice()
+{
+	return $("#price-from").val();	
+}
+function getMaxPrice()
+{
+	return $("#price-to").val();
+}
+function getMinCarUsage()
+{
+	return $("#car-usage-from").val();
+}
+function getMaxCarUsage()
+{
+	return $("#car-usage-to").val();
+}
 
 var allCars = $("#car-choice .filter-results").find(".filter-results-item");
 // Setup cars
@@ -527,6 +549,7 @@ function resetFilters()
 	}
 	$("#price-from").val(1000);
 	$("#price-to").val(10000);
+	priceSlider.noUiSlider.reset();
 	$("#car-usage-from").val(0);
 	$("#car-usage-to").val(100000);
 	toggleTransmissionAny();
@@ -559,10 +582,11 @@ function appendFilters()
 }
 // Filtering cars
 function appendFilters_(){
-	minPrice = $("#price-from").val();
-	maxPrice = $("#price-to").val();
-	minCarUsage = $("#car-usage-from").val();
-	maxCarUsage = $("#car-usage-to").val();
+	minPrice = getMinPrice();
+	maxPrice = getMaxPrice();
+	minCarUsage = getMinCarUsage();
+	maxCarUsage = getMaxCarUsage();
+	
 	isSelectedAtLeastOneColor = false;
 	for (color in selectedColors)
 	{
