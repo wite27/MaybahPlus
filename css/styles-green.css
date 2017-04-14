@@ -1236,13 +1236,12 @@ footer .footer-nav li a {
 #checkoutModal form .checkbox label:before {
   content: "";
   display: inline-block;
-  font-size: 15px;
+  font-size: 20px;
   width: 24px;
   height: 24px;
   margin-right: 10px;
   background-color: #dbdbdb;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  color: #f3f3f3;
   text-align: center;
   line-height: 24px;
   float: left;
