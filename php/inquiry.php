@@ -13,9 +13,7 @@ $isValid = GUMP::is_valid($_POST, array(
 	'last-name' => 'required',
 	'phone-number' => 'required',
 	'email-address' => 'required|valid_email',
-	'address' => 'required',
-	'city' => 'required',
-	'zip-code' => 'required',
+	'address' => 'required'
 	));
 
 if($isValid === true) {
