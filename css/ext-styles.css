@@ -204,9 +204,14 @@ a:hover{
 	cursor: pointer;
 	filter: drop-shadow(0 0 3px rgba(0,0,0,0.5));
 }
-#car-choice .filter-results-item .filter-results-item-description-box .filter-results-item-price-box{
-
+#car-choice .filter-results-item .filter-results-item-price-box{
+	/* background-color: #088c18; */
 }
+#car-choice .filter-results-item .filter-results-item-price-box .filter-results-item-price-text{
+	color: #088c18;
+	font-weight: bold;
+}
+
 /* Selected car */
 #car-choice .selected-car-title-box
 {
