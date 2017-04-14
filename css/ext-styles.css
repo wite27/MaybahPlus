@@ -281,3 +281,10 @@ a:hover{
 .select-location-box .btn{
 	font-size: 20px;
 }
+
+#teaser .car-select-form-title{
+	font-size: 22px;
+	font-weight: bold;
+	text-align: center;
+	margin-bottom: 10px;
+}

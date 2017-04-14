@@ -182,6 +182,7 @@ var scrollTo = $(".scroll-to");
 
 scrollTo.click( function(event) {
   $('.modal').modal('hide');
+  
   var position = $(document).scrollTop();
   var scrollOffset = 110;
 
@@ -339,12 +340,15 @@ $( "#car-select-form" ).submit(function() {
   }
   else
   {
-    $('#car-select-form-msg').css('visibility','visible').hide().fadeIn().removeClass('hidden');
+    $('#car-select-form-msg').css('visibility','visible').fadeIn().removeClass('hidden');
   }
 
   return false;
 });
-
+$(function(){
+    $("[data-hide]").on("click", function(){
+		$(this).closest("." + $(this).attr("data-hide")).hide();});
+});
 
 
 // Check Out Form
@@ -663,6 +667,18 @@ function appendFilters_(){
 }
 
 // Select the car
+
+//Set selected
+
+function setSelectedValue(selectObj, valueToSet) {
+    for (var i = 0; i < selectObj.options.length; i++) {
+        if (selectObj.options[i].value== valueToSet) {
+            selectObj.options[i].selected = true;
+            return;
+        }
+    }
+}
+
 function updateSelectedCar(newCarDataset)
 {
 	selectedCarBox = document.getElementById('selected-car-box');
@@ -685,4 +701,8 @@ function updateSelectedCar(newCarDataset)
 			// "Пробег: " + currentCarDataset["carUsage"] + " км" + "<br>"
 			// + "<br>"
 			// );
+  var objSelect = document.getElementById("car-select");
+  var newSelectedCarVal = newCarDataset["imgSrc"];
+  setSelectedValue(objSelect, newSelectedCarVal);
+  $("#car-select").selectpicker('render');
 }

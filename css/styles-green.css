@@ -245,7 +245,8 @@ header.large .brand {
   padding: 15px 15px 15px 15px;
 }
 #teaser form .alert {
-  margin-top: -20px;
+  margin-top: -15px;
+  margin-bottom: 0px;
   padding: 10px 15px;
 }
 #teaser form ::-webkit-input-placeholder {
@@ -379,7 +380,7 @@ header.large .brand {
   text-transform: uppercase;
   font-weight: 900;
   padding: 10px 0;
-  margin-top: 30px;
+  margin-top: 10px;
   transition: 0.2s;
 }
 #teaser form .submit:hover {

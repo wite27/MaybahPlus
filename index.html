@@ -152,15 +152,19 @@
                 <div class="reservation-form-shadow">
                   <form action="#" method="post" name="	" id="car-select-form">
 
-                    <div class="alert alert-danger hidden" id="car-select-form-msg">
-                      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                      <strong>Внимание:</strong> Все поля обязательны!
-                    </div>
+                    
 					
 					<!-- Car select start -->
+					<div class="alert alert-danger hidden" id="car-select-form-msg">
+                      <button type="button" class="close" data-hide="alert" aria-hidden="true">×</button>
+                      <strong>Внимание:</strong> Все поля обязательны!
+                    </div>
+					<div class = "car-select-form-title">
+						Оформите свой заказ:
+					</div>
 					<div class = "select-car-box">
 						<select class="selectpicker show-tick" data-width="100%" data-size="6" name="car-select" id="car-select">
-						<option value="">Выберите автомобиль</option>
+							<option value="" disabled>Выберите автомобиль</option>
 							<option value="img/vehicles/vaz-2101-black.jpg">ВАЗ-2101 «Жигули» чёрный</option>
 							<option value="img/vehicles/vaz-2101-white.jpg">ВАЗ-2101 «Жигули» белый</option>
 							<option value="img/vehicles/vaz-2101-red.jpg">ВАЗ-2101 «Жигули» красный</option>
@@ -175,8 +179,9 @@
                       <div class="input-group pick-up">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> Взять</span>
 						<div class = "select-location-box">
-						<select class="selectpicker show-tick" data-width="100%" data-size="6" name="pick-up-location" id="pick-up-location">
-						<option value="">Выберите офис проката</option>
+						<select class="selectpicker show-tick" data-width="100%" data-size="6" name="pick-up-location" id="pick-up-location"
+						title="Выберите офис проката">
+						<!-- <option value="" disabled>Выберите офис проката</option> -->
 							<option value="Санкт-Петербург, В.О., линия 14-я, 29 ст. м. Василеостровская" data-subtext="В.О., линия 14-я, 29 ст. м. Василеостровская">Главный офис</option>
 							<option value="Невский проспект, 111, ст. м. Невский проспект" data-subtext="Невский проспект, 111, ст. м. Невский проспект">Невский район</option>
 							<option value="Московский проспект, 359, ст. м. Московские ворота" data-subtext="Московский проспект, 359, ст. м. Московские ворота">Московский район</option>
@@ -194,8 +199,9 @@
                       <div class="input-group drop-off">
                         <span class="input-group-addon"><span class="glyphicon glyphicon-map-marker"></span> Вернуть</span>
                         <div class = "select-location-box">
-						<select class="selectpicker show-tick" data-width="100%" data-size="6" name="drop-off-location" id="drop-off-location">
-						<option value="">Выберите офис проката</option>
+						<select class="selectpicker show-tick" data-width="100%" data-size="6" name="drop-off-location" id="drop-off-location"
+						title="Выберите офис проката">
+						    <!-- <option value="" disabled>Выберите офис проката</option> -->
 							<option value="Санкт-Петербург, В.О., линия 14-я, 29 ст. м. Василеостровская" data-subtext="В.О., линия 14-я, 29 ст. м. Василеостровская">Главный офис</option>
 							<option value="Невский проспект, 111, ст. м. Невский проспект" data-subtext="Невский проспект, 111, ст. м. Невский проспект">Невский район</option>
 							<option value="Московский проспект, 359, ст. м. Московские ворота" data-subtext="Московский проспект, 359, ст. м. Московские ворота">Московский район</option>
@@ -337,11 +343,12 @@
                       </div>
                       <div class="clearfix"></div>					  
 					</div>
-					<span style="color:#716d6e; font-weight:bold">Вы в любой момент сможете <a href="#services" class="scroll-to">продлить аренду.</a>
+					<span style="color:#716d6e; font-weight:bold">Вы в любой момент сможете <a href="#services" class="scroll-to">продлить аренду.</a></span>
                     
                     <!-- Drop-off date/time end -->
-
+					
                     <input type="submit" class="submit" name="submit" value="забронировать!" id="checkoutModalLabel">
+					
                   </form>
 
                 </div>
@@ -863,7 +870,7 @@
                 <div class="col-md-12 text-center">
                   <ul class="footer-nav">
                     <li><a class="scroll-to" href="#top">Главная</a></li>
-                    <li><a class="scroll-to" href="#vehicles">Автопарк</a></li>
+                    <li><a class="scroll-to" href="#car-choice">Автопарк</a></li>
                     <li><a class="scroll-to" href="#services">Услуги</a></li>
                     <li><a class="scroll-to" href="#reviews">Отзывы</a></li>
                     <li><a class="scroll-to" href="#offices_section">Адреса</a></li>
@@ -1072,8 +1079,8 @@
                   <div class="checkout-address-info">
                     <div class="form-group address">
                       <label for="address">Адрес</label>
-                      <input type="text" class="form-control" name="address" id="address" placeholder="Введите улицу и номер дома">
-                    </div>
+                      <input type="text" class="form-control" name="address" id="address" placeholder="Введите город, улицу и номер дома">
+                    </div><!-- 
                     <div class="form-group city">
                       <label for="city">Город</label>
                       <input type="text" class="form-control" name="city" id="city" placeholder="Введите ваш город">
@@ -1081,7 +1088,7 @@
                     <div class="form-group zip-code">
                       <label for="zip-code">Индекс</label>
                       <input type="text" class="form-control" name="zip-code" id="zip-code" placeholder="Введите ваш индекс">
-                    </div>
+                    </div> -->
                     <div class="clearfix"></div>
                   </div>
                   <!-- Checkout Address Info end -->
