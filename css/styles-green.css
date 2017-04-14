@@ -245,8 +245,8 @@ header.large .brand {
   padding: 15px 15px 15px 15px;
 }
 #teaser form .alert {
-  margin-top: -15px;
-  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-bottom: -5px;
   padding: 10px 15px;
 }
 #teaser form ::-webkit-input-placeholder {
