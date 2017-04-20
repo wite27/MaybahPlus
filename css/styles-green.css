@@ -327,10 +327,10 @@ header.large .brand {
   margin: 0 2px 0 -2px;
 }
 #teaser form .different-drop-off {
-  color: #716d6e;
+  color: #088c18;
   font-weight: bold;
-  margin: 3px 0;
-  display: block;
+  /* margin: 3px 0; */
+  /* display: block; */
   text-decoration: underline;
 }
 #teaser form .date {
