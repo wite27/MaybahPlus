@@ -517,10 +517,12 @@ function sortByPriceDesc()
 
 function sortByPrice(direction)
 {
+	$(".filter-result-items").stop().fadeOut(0);
 	for (var carIndex = 0; carIndex < allCars.length; carIndex++)
 	{
 		$(allCars[carIndex]).css("order", direction * (+allCars[carIndex].dataset["price"]));
 	}
+	$(".filter-result-items").stop().fadeIn(500);
 }
 // Filters setting
 

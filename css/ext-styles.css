@@ -179,10 +179,12 @@ a:hover{
 
 /* Filtered cars - searching result */
 #car-choice .filter-results{	
-	display: flex;
-	flex-direction: column;
 	background-color: #ededed;
 	padding-bottom: 5px;
+}
+#car-choice .filter-result-items{
+	display: flex;
+	flex-direction: column;
 }
 #car-choice .filter-results .filter-results-item{
 	padding: 3px 3px 3px 3px;
