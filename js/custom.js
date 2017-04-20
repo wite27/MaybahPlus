@@ -583,6 +583,7 @@ var isEmpty = false;
 function resetFilters()
 {
 	isEmpty = false;
+	$(".filter-result-items").fadeOut(0);
 	$(".filter-results-fail").removeClass("active");
 	for (key in selectedColors)
 	{
@@ -602,6 +603,7 @@ function resetFilters()
 		var currentCar = $(allCars[carIndex]);
 		currentCar.show();
 	}
+	$(".filter-result-items").fadeIn(500);
 }
 
 // Color Selector 
@@ -609,6 +611,7 @@ function resetFilters()
 function appendFilters()
 {
 	isEmpty = true;
+	$(".filter-result-items").fadeOut(0);
 	appendFilters_();
 	if (isEmpty)
 	{
@@ -617,6 +620,7 @@ function appendFilters()
 	{		
 		$(".filter-results-fail").removeClass("active");
 	}
+	$(".filter-result-items").fadeIn(500);
 	return false;
 }
 // Filtering cars
@@ -682,6 +686,7 @@ function setSelectedValue(selectObj, valueToSet) {
 function updateSelectedCar(newCarDataset)
 {
 	selectedCarBox = document.getElementById('selected-car-box');
+	$(selectedCarBox).fadeOut(0);
 	$(selectedCarBox).find("img").attr("src", newCarDataset["imgSrc"]);	
 	$(selectedCarBox).find("#selected-car-price").text(newCarDataset["price"]);	
 	$(selectedCarBox).find("#selected-car-title").text(newCarDataset["title"]);
@@ -705,4 +710,5 @@ function updateSelectedCar(newCarDataset)
   var newSelectedCarVal = newCarDataset["imgSrc"];
   setSelectedValue(objSelect, newSelectedCarVal);
   $("#car-select").selectpicker('render');
+  $(selectedCarBox).fadeIn(600);
 }
