@@ -1204,10 +1204,10 @@ footer .footer-nav li a {
   height: 39px;
 }
 #checkoutModal form input {
-  background-color: #dbdbdb;
+  background-color: #FFFFFF;
   height: 45px;
-  border-radius: 0;
-  border: none;
+  border-radius: 1px;
+  border: 2px solid #DBDBDB;
   box-shadow: none;
   line-height: 45px;
   font-size: 18px;
