@@ -23,7 +23,7 @@
 	
 	var Datepicker = function(element, options){
 		this.element = $(element);
-		this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'mm/dd/yyyy');
+		this.format = DPGlobal.parseFormat(options.format||this.element.data('date-format')||'dd/mm/yyyy');
 		this.picker = $(DPGlobal.template)
 							.appendTo('body')
 							.on({
@@ -76,7 +76,7 @@
 			}
 		}
 		this.startViewMode = this.viewMode;
-		this.weekStart = options.weekStart||this.element.data('date-weekstart')||0;
+		this.weekStart = options.weekStart||this.element.data('date-weekstart')||1;
 		this.weekEnd = this.weekStart === 0 ? 6 : this.weekStart - 1;
 		this.onRender = options.onRender;
 		this.fillDow();
@@ -371,8 +371,8 @@
 		dates:{
 			days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
 			daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-			daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"],
-			months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+			daysMin: ["Вс", "Пн", "Вт", "Ср", "Пт", "Чт", "Сб", "Вс"],
+			months: ["Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"],
 			monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 		},
 		isLeapYear: function (year) {

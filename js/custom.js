@@ -82,9 +82,11 @@ $(".vehicle-data-select").change(function(){
 
 // Initialize Datepicker
 //-------------------------------------------------------------------------------
+
 $('.datepicker').datepicker().on('changeDate', function(){
-  $(this).datepicker('hide');
+	$(this).datepicker('hide');
 });
+
 
 
 
